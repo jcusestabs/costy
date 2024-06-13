@@ -4,7 +4,7 @@ import Modal from "@/components/commons/Modal";
 const IngresarCasoUso = () => {
   return (
     <Modal show={true}>
-      <div className="h-[60vh] w-[60vw] flex flex-col gap-2 px-4 border">
+      <div className="flex flex-col gap-2 px-4 border ">
         <h3 className="text-2xl">Ingresar Caso Uso</h3>
         <div className="flex w-full gap-4 ">
           <p className="font-bold">Nombre: </p>
