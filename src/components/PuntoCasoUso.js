@@ -1,8 +1,11 @@
 import React from 'react'
-
+import IngresarCasoUso from '@/caso-uso/IngresarCasoUso'
 const PuntoCasoUso = () => {
   return (
-    <div>PuntoCasoUso</div>
+    <div>PuntoCasoUso
+      <IngresarCasoUso />
+
+    </div>
   )
 }
 
