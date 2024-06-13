@@ -10,27 +10,27 @@ import { useMemo, useState } from "react";
 const router = [
   {
     id: 0,
-    title: "Punto de Funcion Ajustado",
+    title: "Puntos de Funcion",
     Target: PuntoFuncion,
   },
   {
     id: 1,
-    title: "Punto de Caso-Uso",
+    title: "Puntos de Casos-Usos",
     Target: PuntoCasoUso,
   },
   {
     id: 2,
-    title: "Punto de Objeto",
+    title: "Puntos de Objeto",
     Target: PuntoObjeto,
   },
   {
     id: 3,
-    title: "Puntos Cosmos",
+    title: "Puntos Cosmic",
     Target: PuntoCosmos,
   },
   {
     id: 4,
-    title: "Analisis McCall",
+    title: "Analisis de McCall",
     Target: McCall,
   },
 ]
