@@ -9,8 +9,8 @@ export const useCasouso = create((set) => ({
     complejo: 0,
   },
   transacciones: [],
-  factoresTecnicos: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  factoresAmbientales: [0, 0, 0, 0, 0, 0, 0, 0],
+  tecnicos: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  ambientales: [0, 0, 0, 0, 0, 0, 0, 0],
 
   updateNombre: (nombre) => set({ nombre }),
   updateDescripcion: (descripcion) => set({ descripcion }),
@@ -28,5 +28,14 @@ export const useCasouso = create((set) => ({
 
   eliminarTransaccion: (index) => set((state) => ({
     transacciones: state.transacciones.filter((_, i) => i !== index)
-  }))
+  })),
+
+  updateTecnicos: (index, valor) => set((state) => ({
+    tecnicos: state.tecnicos.map((t, i) => i === index ? valor : t)
+  })),
+
+  updateAmbientales: (index, valor) => set((state) => ({
+    ambientales: state.ambientales.map((t, i) => i === index ? valor : t)
+  })),
+
 }));

@@ -1,4 +1,4 @@
-const factoresTecnicos = {
+export const factoresTecnicos = {
   descripciones: [
     'Sistema Distribuido',
     'Rendimiento o Tiempo de Respuesta',
@@ -18,7 +18,7 @@ const factoresTecnicos = {
   pesos: [2, 1, 1, 1, 1, 0.5, 0.5, 2, 1, 1, 1, 1, 1,]
 }
 
-const factoresAmbientales = {
+export const factoresAmbientales = {
   descripciones: [
     "Familiaridad con el modelo de proyecto",
     "Personal a tiempo parcial",
