@@ -9,6 +9,8 @@ export const useCasouso = create((set) => ({
     complejo: 0,
   },
   transacciones: [],
+  factoresTecnicos: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  factoresAmbientales: [0, 0, 0, 0, 0, 0, 0, 0],
 
   updateNombre: (nombre) => set({ nombre }),
   updateDescripcion: (descripcion) => set({ descripcion }),
