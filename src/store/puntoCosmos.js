@@ -1,6 +1,4 @@
-import { create } from "zustand";
-
-export const usePuntoCosmos = create((set) => ({
+export const usePuntoCosmos = ((set) => ({
   requerimientos: [],
 
   agregarPunto: (punto) => set((state) => ({ requerimientos: [...state.requerimientos, punto] })),

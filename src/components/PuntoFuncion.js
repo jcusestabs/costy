@@ -3,13 +3,13 @@ import IngresarRequerimiento from '@/punto-funcion-ajustado/IngresarRequerimient
 import FactoresPF from '@/punto-funcion-ajustado/Factores'
 import Requerimientos from '@/punto-funcion-ajustado/Requerimientos'
 import Modal from './commons/Modal'
-import { usePuntoDeFuncion } from '@/store/puntoDeFuncion'
+import { useBoundStore } from '@/store/boundStore'
 import { calculateFunctionPoints, calculateAdjustmentPoints, calculateUFP } from '@/punto-funcion-ajustado/calcs'
 
 const PuntoFuncion = () => {
 
   const [showResult, setShowResult] = React.useState(false)
-  const { arrayRequerimientos, ajuste } = usePuntoDeFuncion();
+  const { arrayRequerimientos, ajuste } = useBoundStore();
 
   const funcionPoints = calculateFunctionPoints(arrayRequerimientos);
   const adjustmentPoints = calculateAdjustmentPoints(ajuste);

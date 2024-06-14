@@ -3,11 +3,11 @@ import IngresarCasoUso from '@/caso-uso/IngresarCasoUso'
 import Factores from '@/caso-uso/Factores'
 import Modal from './commons/Modal'
 import { calcularPesoActores, calcularPesoTransacciones, calcularFactoresAmbientales, calcularFactoresTecnicos, calcularTcf, calcularEcf } from '@/caso-uso/calcs'
-import { useCasouso } from '@/store/casoUso'
+import { useBoundStore } from '@/store/boundStore'
 
 const PuntoCasoUso = () => {
 
-  const { nombre, descripcion, actores, transacciones, tecnicos, ambientales } = useCasouso();
+  const { nombre, descripcion, actores, transacciones, tecnicos, ambientales } = useBoundStore();
   const [showResult, setShowResult] = React.useState(false)
 
   const auw = calcularPesoActores(actores);

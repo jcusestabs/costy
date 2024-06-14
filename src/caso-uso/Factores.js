@@ -1,13 +1,11 @@
 import React from 'react'
-import { useCasouso } from '@/store/casoUso'
+import { useBoundStore } from '@/store/boundStore'
 import { factoresTecnicos, factoresAmbientales } from '@/caso-uso/data'
 
 const Factores = () => {
-  const { tecnicos, ambientales } = useCasouso()
-  const updateTecnicos = useCasouso((state) => state.updateTecnicos)
-  const updateAmbientales = useCasouso((state) => state.updateAmbientales)
-
-
+  const { tecnicos, ambientales } = useBoundStore()
+  const updateTecnicos = useBoundStore((state) => state.updateTecnicos)
+  const updateAmbientales = useBoundStore((state) => state.updateAmbientales)
 
   return (
     <div className='grid w-full grid-cols-2 gap-2 '>

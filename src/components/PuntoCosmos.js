@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import Modal from './commons/Modal'
-import { usePuntoCosmos } from '@/store/puntoCosmos'
+import { useBoundStore } from '@/store/boundStore'
 
 const PuntoCasoUso = () => {
 
   const [descripcion, setDescripcion] = useState('')
   const [tipo, setTipo] = useState()
 
-  const { requerimientos } = usePuntoCosmos();
-  const agregarPunto = usePuntoCosmos((state) => state.agregarPunto);
-  const eliminarPunto = usePuntoCosmos((state) => state.eliminarPunto);
+  const { requerimientos } = useBoundStore();
+  const agregarPunto = useBoundStore((state) => state.agregarPunto);
+  const eliminarPunto = useBoundStore((state) => state.eliminarPunto);
 
 
   const [showResult, setShowResult] = React.useState(false)

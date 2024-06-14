@@ -1,14 +1,14 @@
 import React from "react";
-import { useCasouso } from "@/store/casoUso";
+import { useBoundStore } from '../store/boundStore';
 
 const IngresarCasoUso = () => {
 
-  const { nombre, descripcion, actores, transacciones } = useCasouso();
-  const updateActores = useCasouso((state) => state.updateActores);
-  const addTransaccion = useCasouso((state) => state.addTransaccion);
-  const eliminarTransaccion = useCasouso((state) => state.eliminarTransaccion);
-  const updateNombre = useCasouso((state) => state.updateNombre);
-  const updateDescripcion = useCasouso((state) => state.updateDescripcion);
+  const { nombre, descripcion, actores, transacciones } = useBoundStore();
+  const updateActores = useBoundStore((state) => state.updateActores);
+  const addTransaccion = useBoundStore((state) => state.addTransaccion);
+  const eliminarTransaccion = useBoundStore((state) => state.eliminarTransaccion);
+  const updateNombre = useBoundStore((state) => state.updateNombre);
+  const updateDescripcion = useBoundStore((state) => state.updateDescripcion);
 
   const [descriptionTransaccion, setDescriptionTransaccion] = React.useState('');
   const [numeroTransacciones, setNumeroTransacciones] = React.useState(0);
@@ -119,6 +119,7 @@ const IngresarCasoUso = () => {
       </div>
     </div >
   );
+
 };
 
 export default IngresarCasoUso;

@@ -1,8 +1,8 @@
 import React from 'react';
-import { usePuntoDeFuncion } from '@/store/puntoDeFuncion';
+import { useBoundStore } from '@/store/boundStore';
 
 const Requerimientos = () => {
-    const { arrayRequerimientos } = usePuntoDeFuncion();
+    const { arrayRequerimientos } = useBoundStore();
     return (
         <div className="flex flex-col gap-2 p-4 border rounded-md">
             <h3 className="text-2xl">Requerimientos</h3>
