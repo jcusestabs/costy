@@ -3,7 +3,6 @@ import PuntoObjeto from "@/components/PuntoObjeto";
 import PuntoCasoUso from "@/components/PuntoCasoUso";
 import PuntoFuncion from "@/components/PuntoFuncion";
 import PuntoCosmos from "@/components/PuntoCosmos";
-import McCall from "@/components/McCall";
 
 import { useMemo, useState } from "react";
 
@@ -28,11 +27,7 @@ const router = [
     title: "Puntos Cosmos",
     Target: PuntoCosmos,
   },
-  {
-    id: 4,
-    title: "Analisis McCall",
-    Target: McCall,
-  },
+
 ]
 
 export default function Home() {
@@ -54,7 +49,7 @@ export default function Home() {
           <p>Rodrigo Vladimir Gomez Aguilar</p>
         </div>
       </div>
-      <div className="grid grid-cols-5 ">
+      <div className="grid grid-cols-4 ">
         {router.map((item) => {
           return <MenuTab key={item.id} selected={item.id === selectedTab} onClick={() => setSelectedTab(item.id)}>{item.title}</MenuTab>
         })}
