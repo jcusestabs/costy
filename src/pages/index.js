@@ -49,7 +49,9 @@ export default function Home() {
         <h1 className="text-3xl">Analisis de Costos</h1>
         <div className="w-full p-4 leading-8 bg-blue-100 border-4 border-blue-300">
           <p className="font-bold">Analisis de costos</p>
-          <p>Ingresar aqui descripcion de metodo usado</p>
+          <p>Jose Carlos Ramirez Peralta</p>
+          <p>Kelvin Edenilson Rojas Chilin</p>
+          <p>Rodrigo Vladimir Gomez Aguilar</p>
         </div>
       </div>
       <div className="grid grid-cols-5 ">
