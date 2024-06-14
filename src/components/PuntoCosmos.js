@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
-// import IngresarCasoUso from '@/caso-uso/IngresarCasoUso'
-// import Factores from '@/caso-uso/Factores'
 import Modal from './commons/Modal'
-// import { calcularPesoActores, calcularPesoTransacciones, calcularFactoresAmbientales, calcularFactoresTecnicos, calcularTcf, calcularEcf } from '@/caso-uso/calcs'
-// import { useCasouso } from '@/store/casoUso'
 import { usePuntoCosmos } from '@/store/puntoCosmos'
 
 const PuntoCasoUso = () => {
