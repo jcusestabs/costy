@@ -14,14 +14,16 @@ const IngresarRequerimiento = () => {
     const addRequerimiento = useBoundStore((state) => state.addRequerimiento);
 
     const handleCreateRequirement = () => {
-        const indexOfComplejidad = complejidades.indexOf(complejidad);
-        const functionsPoint = calculateFunctionPointsForRequirement(tipoRequerimiento, indexOfComplejidad);
-        addRequerimiento({
-            nombre,
-            complejidad,
-            tipoRequerimiento,
-            functionsPoint
-        });
+        if (complejidad && tipoRequerimiento) {
+            const indexOfComplejidad = complejidades.indexOf(complejidad);
+            const functionsPoint = calculateFunctionPointsForRequirement(tipoRequerimiento, indexOfComplejidad);
+            addRequerimiento({
+                nombre,
+                complejidad,
+                tipoRequerimiento,
+                functionsPoint
+            });
+        }
     };
 
     return (
