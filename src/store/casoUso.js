@@ -1,6 +1,5 @@
-import { create } from "zustand";
+export const useCasouso = ((set) => ({
 
-export const useCasouso = create((set) => ({
   nombre: '',
   descripcion: '',
   actores: {

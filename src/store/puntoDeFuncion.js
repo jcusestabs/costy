@@ -1,6 +1,5 @@
-import { create } from "zustand";
+export const usePuntoDeFuncion = ((set) => ({
 
-export const usePuntoDeFuncion = create((set) => ({
     nombre: '',
     tipoRequerimiento : {},
     complejidad : '',

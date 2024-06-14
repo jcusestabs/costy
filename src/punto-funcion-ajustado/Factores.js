@@ -1,11 +1,11 @@
 import React from 'react';
-import { usePuntoDeFuncion } from '@/store/puntoDeFuncion';
+import { useBoundStore } from '@/store/boundStore';
 import { factoresDeAjuste } from './data';
 
 const FactoresPF = () => {
 
-    const { ajuste } = usePuntoDeFuncion();
-    const updateAjuste = usePuntoDeFuncion(state => state.updateAjuste);
+    const { ajuste } = useBoundStore();
+    const updateAjuste = useBoundStore(state => state.updateAjuste);
 
   return (
     <div className="flex flex-col gap-2 p-4 border rounded-md">

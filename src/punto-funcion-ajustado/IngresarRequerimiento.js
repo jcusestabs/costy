@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePuntoDeFuncion } from '@/store/puntoDeFuncion';
+import { useBoundStore } from '@/store/boundStore';
 import { requerimiento } from '@/punto-funcion-ajustado/data'
 import { calculateFunctionPointsForRequirement } from './calcs';
 
@@ -7,11 +7,11 @@ const IngresarRequerimiento = () => {
 
     const { complejidades, tipoRequerimientos } = requerimiento;
 
-    const { nombre, complejidad, tipoRequerimiento } = usePuntoDeFuncion();
-    const updateComplejidad = usePuntoDeFuncion((state) => state.updateComplejidad);
-    const updateTipoRequerimiento = usePuntoDeFuncion((state) => state.updateTipoRequerimiento);
-    const updateNombre = usePuntoDeFuncion((state) => state.updateNombre);
-    const addRequerimiento = usePuntoDeFuncion((state) => state.addRequerimiento);
+    const { nombre, complejidad, tipoRequerimiento } = useBoundStore();
+    const updateComplejidad = useBoundStore((state) => state.updateComplejidad);
+    const updateTipoRequerimiento = useBoundStore((state) => state.updateTipoRequerimiento);
+    const updateNombre = useBoundStore((state) => state.updateNombre);
+    const addRequerimiento = useBoundStore((state) => state.addRequerimiento);
 
     const handleCreateRequirement = () => {
         const indexOfComplejidad = complejidades.indexOf(complejidad);
