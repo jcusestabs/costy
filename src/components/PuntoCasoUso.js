@@ -27,7 +27,7 @@ const PuntoCasoUso = () => {
     <div className='flex flex-col gap-2 m-2'>
       <IngresarCasoUso />
       <Factores />
-      <Modal show={showResult} >
+      <Modal show={showResult} onClose={() => setShowResult(false)}>
         <div className='flex flex-col items-center gap-2 '>
           <h1 className='text-2xl'>Resultado</h1>
 

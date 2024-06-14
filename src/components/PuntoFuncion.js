@@ -24,7 +24,7 @@ const PuntoFuncion = () => {
           <Requerimientos />
           <FactoresPF />
         </div>
-        <Modal show={showResult} >
+        <Modal show={showResult} onClose={() => setShowResult(false)}>
           <div className='flex flex-col items-center gap-2 '>
             <h1 className='text-2xl'>Resultado</h1>
             <div className="grid w-full h-full grid-cols-4 gap-4 p-4 border">
