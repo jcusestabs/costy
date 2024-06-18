@@ -1,12 +1,12 @@
 export const usePuntoDeFuncion = ((set) => ({
 
-    nombre: '',
+    nombreRequerimiento: '',
     tipoRequerimiento : {},
     complejidad : '',
     arrayRequerimientos : [],
     ajuste: [0,0,0,0,0,0,0,0,0,0,0,0,0],
 
-    updateNombre : (nombre) => set({ nombre }),
+    updateNombreRequerimiento : (nombreRequerimiento) => set({ nombreRequerimiento }),
     updateComplejidad: (complejidad) => set({ complejidad : complejidad }),
     updateTipoRequerimiento: (tipoRequerimiento) => set({ tipoRequerimiento : tipoRequerimiento }),
     

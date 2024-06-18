@@ -7,10 +7,10 @@ const IngresarRequerimiento = () => {
 
     const { complejidades, tipoRequerimientos } = requerimiento;
 
-    const { nombre, complejidad, tipoRequerimiento } = useBoundStore();
+    const { nombreRequerimiento, complejidad, tipoRequerimiento } = useBoundStore();
     const updateComplejidad = useBoundStore((state) => state.updateComplejidad);
     const updateTipoRequerimiento = useBoundStore((state) => state.updateTipoRequerimiento);
-    const updateNombre = useBoundStore((state) => state.updateNombre);
+    const updateNombreRequerimiento = useBoundStore((state) => state.updateNombreRequerimiento);
     const addRequerimiento = useBoundStore((state) => state.addRequerimiento);
 
     const handleCreateRequirement = () => {
@@ -18,7 +18,7 @@ const IngresarRequerimiento = () => {
             const indexOfComplejidad = complejidades.indexOf(complejidad);
             const functionsPoint = calculateFunctionPointsForRequirement(tipoRequerimiento, indexOfComplejidad);
             addRequerimiento({
-                nombre,
+                nombreRequerimiento,
                 complejidad,
                 tipoRequerimiento,
                 functionsPoint
@@ -31,7 +31,7 @@ const IngresarRequerimiento = () => {
             <h3 className="text-2xl">Ingresar Requerimiento</h3>
             <div className="flex w-full gap-4">
                 <p className="font-bold">Nombre: </p>
-                <input type="text" value={nombre} onChange={(e) => updateNombre(e.target.value)} className="flex-grow border rounded-md" />
+                <input type="text" value={nombreRequerimiento} onChange={(e) => updateNombreRequerimiento(e.target.value)} className="flex-grow border rounded-md" />
                 <button className="px-2 text-white bg-blue-500 rounded-md" onClick={handleCreateRequirement}>
                     Añadir Requerimiento
                 </button>
